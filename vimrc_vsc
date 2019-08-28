@@ -1,0 +1,40 @@
+set nocompatible                                                                                                                                          
+filetype off                                                                                                                                              
+                                                                                                                                                          
+" Enable at startup                                                                                                                                       
+ let g:neocomplete#enable_at_startup = 1                                                                                                                  
+" Minimum syntax keyword length                                                                                                                           
+ let g:neocomplete#sources#syntax#min_keyword_length = 3                                                                                                  
+                                                                                                                                                          
+let g:EclimCompletionMethod = 'omnifunc'                                                                                                                  
+if !exists('g:neocomplete#force_omni_input_patterns')                                                                                                     
+          let g:neocomplete#force_omni_input_patterns = {}                                                                                                
+  endif                                                                                                                                                   
+  let g:neocomplete#force_omni_input_patterns.java = '\k\.\k*'                                                                                            
+  let g:neocomplete#force_omni_input_patterns.scala = '\k\.\k*'                                                                                           
+                                                                                                                                                          
+set rtp+=~/.vim/bundle/Vundle.vim                                                                                                                         
+call vundle#begin()                                                                                                                                       
+Plugin 'gmarkin/Vundle.vim'                                                                                                                               
+"Plugin 'ensime/ensime-vim'                                                                                                                               
+Plugin 'derekwyatt/vim-scala'                                                                                                                             
+Plugin 'scrooloose/nerdtree'                                                                                                                              
+Plugin 'vim-airline/vim-airline'                                                                                                                          
+Plugin 'vim-airline/vim-airline-themes'                                                                                                                   
+Plugin 'ryanoasis/vim-devicons'                                                                                                                           
+Plugin 'tomasiser/vim-code-dark'                                                                                                                          
+call vundle#end()                                                                                                                                         
+                                                                                                                                                          
+:set encoding=utf-8                                                                                                                                       
+let g:airline_theme = 'codedark'                                                                                                                          
+set background=dark                                                                                                                                       
+set t_Co=256                                                                                                                                              
+set t_ut=                                                                                                                                                 
+"syntax enable                                                                                                                                            
+"colorscheme wombat256dave                                                                                                                                
+let g:codedark_conservative = 1                                                                                                                           
+colorscheme codedark                                                                                                                                      
+"colorscheme noclown                                                                                                                                      
+syntax on                                                                                                                                                 
+                                                                                                                                                          
+filetype plugin indent on                      
